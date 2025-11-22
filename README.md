@@ -2,15 +2,15 @@
 
 A comprehensive React Native mobile application built with Expo CLI for viewing sports teams, matches, players, and scores. Features user authentication, favorites management, and dark mode support.
 
-## 🏆 Features
+## Features
 
 ### Core Functionality
-- ✅ **User Authentication**: Login and registration with form validation using Yup
-- ✅ **Dynamic Home Screen**: Display sports teams from TheSportsDB API with search functionality
-- ✅ **Team Details**: View comprehensive team information including stadium, history, and social links
-- ✅ **Favorites Management**: Add/remove teams from favorites with persistent storage
-- ✅ **Dark Mode**: Toggle between light and dark themes with preferences saved locally
-- ✅ **Responsive Design**: Clean UI with Feather Icons and responsive layouts
+-  **User Authentication**: Login and registration with form validation using Yup
+-  **Dynamic Home Screen**: Display sports teams from TheSportsDB API with search functionality
+-  **Team Details**: View comprehensive team information including stadium, history, and social links
+-  **Favorites Management**: Add/remove teams from favorites with persistent storage
+-  **Dark Mode**: Toggle between light and dark themes with preferences saved locally
+-  **Responsive Design**: Clean UI with Feather Icons and responsive layouts
 
 ### Technical Implementation
 - **State Management**: Redux Toolkit for global state
@@ -19,16 +19,18 @@ A comprehensive React Native mobile application built with Expo CLI for viewing 
 - **Form Validation**: Formik + Yup for robust form handling
 - **API Integration**: TheSportsDB API for sports data, DummyJSON for authentication
 
-## 📱 Screenshots
+## Screenshots
 
 The app includes:
 - Login/Registration screens with validation
-- Home screen with searchable team list
+- Home screen with team list
 - Detailed team view with social media links
 - Favorites screen with persistent storage
+- Players page with detail player view
+- matches page with detail match view
 - Profile screen with dark mode toggle
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -60,57 +62,14 @@ The app includes:
    - Press `i` for iOS simulator (macOS only)
    - Press `w` for web browser
 
-## 🔑 Demo Credentials
+## Demo Credentials
 
 For testing the login functionality:
 - **Username**: `emilys`
 - **Password**: `emilyspass`
 
-## 📁 Project Structure
 
-```
-Sportify/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Button.js
-│   │   ├── Card.js
-│   │   ├── Input.js
-│   │   └── LoadingSpinner.js
-│   ├── constants/          # App constants and configuration
-│   │   ├── api.js
-│   │   └── colors.js
-│   ├── context/            # React Context providers
-│   │   └── ThemeContext.js
-│   ├── navigation/         # Navigation configuration
-│   │   ├── AppNavigator.js
-│   │   ├── BottomTabNavigator.js
-│   │   ├── HomeStack.js
-│   │   └── FavoritesStack.js
-│   ├── redux/              # Redux state management
-│   │   ├── slices/
-│   │   │   ├── authSlice.js
-│   │   │   ├── favoritesSlice.js
-│   │   │   └── sportsSlice.js
-│   │   └── store.js
-│   ├── screens/            # App screens
-│   │   ├── LoginScreen.js
-│   │   ├── RegisterScreen.js
-│   │   ├── HomeScreen.js
-│   │   ├── DetailsScreen.js
-│   │   ├── FavoritesScreen.js
-│   │   └── ProfileScreen.js
-│   ├── services/           # API services
-│   │   ├── authService.js
-│   │   └── sportsService.js
-│   └── utils/              # Utility functions
-│       ├── storage.js
-│       └── validation.js
-├── App.js                  # App entry point
-├── app.json               # Expo configuration
-└── package.json           # Dependencies
-```
-
-## 🔧 Technologies Used
+## Technologies Used
 
 ### Core
 - **React Native** - Mobile framework
@@ -136,7 +95,7 @@ Sportify/
 - **TheSportsDB API** - Sports data
 - **DummyJSON** - Mock authentication
 
-## 🎯 Key Features Implementation
+## Key Features Implementation
 
 ### Authentication
 - Secure token storage using Expo SecureStore
@@ -149,33 +108,12 @@ Sportify/
 - Separate slices for auth, sports, and favorites
 - Middleware configuration for async operations
 
-### Navigation
-- Stack navigation for screen hierarchy
-- Bottom tabs for main app sections
-- Conditional rendering based on auth state
-
-### Data Persistence
-- Favorites saved to AsyncStorage
-- Theme preference persistence
-- Auth tokens in SecureStore
-
 ### API Integration
 - TheSportsDB for real sports data
 - Error handling and loading states
 - Search functionality
 
-## 📝 Best Practices Implemented
-
-1. **Code Organization**: Feature-based folder structure
-2. **Reusable Components**: Modular, testable components
-3. **Type Safety**: Proper prop validation
-4. **Error Handling**: Try-catch blocks and user feedback
-5. **Performance**: Memoization and optimized rendering
-6. **Security**: Secure storage for sensitive data
-7. **UX**: Loading states, error messages, and smooth navigation
-8. **Accessibility**: Proper touch targets and readable text
-
-## 🌙 Dark Mode
+## Dark Mode
 
 The app features a complete dark mode implementation:
 - Toggle in Profile screen
@@ -183,7 +121,7 @@ The app features a complete dark mode implementation:
 - Smooth theme transitions
 - Consistent color scheme
 
-## 🔄 State Management Flow
+## State Management Flow
 
 ```
 User Action → Dispatch Action → Reducer → Update State → Re-render Component
@@ -196,7 +134,7 @@ User Action → Dispatch Action → Reducer → Update State → Re-render Compo
 4. AsyncStorage saves updated favorites
 5. UI reflects new favorite state
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -225,20 +163,7 @@ npx expo build:android
 npx expo build:ios
 ```
 
-## 🤝 Contributing
-
-This is a project submission for a mobile development assignment. For contributions:
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes with descriptive messages
-4. Push to your fork
-5. Create a pull request
-
-## 📄 License
-
-This project is created for educational purposes.
-
-## 👨‍💻 Author
+##  Author
 
 Created as part of a React Native mobile development assignment focusing on:
 - Modern React Native development practices
@@ -248,7 +173,7 @@ Created as part of a React Native mobile development assignment focusing on:
 - Persistent data storage
 - Responsive UI design
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **TheSportsDB** - Sports data API
 - **DummyJSON** - Mock authentication API
@@ -256,7 +181,4 @@ Created as part of a React Native mobile development assignment focusing on:
 - **React Navigation** - Navigation library
 - **Feather Icons** - Icon library
 
----
 
-**Version**: 1.0.0  
-**Built with**: React Native, Expo, Redux Toolkit, React Navigation
